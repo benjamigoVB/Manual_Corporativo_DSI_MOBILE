@@ -11,10 +11,14 @@
 </head>
 <body>
 
-  <!-- 1. Header Superior Global (1220px Fijo Centrado) -->
+ <!-- 1. Header Superior Global -->
   <header class="topbar">
     <div class="topbar-inner">
+      
       <div class="topbar-left">
+        <!-- Botón menú hamburguesa para dispositivos móviles -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">☰</button>
+
         <div class="logo-box">
           <span class="logo-icon">📘</span>
           <div class="logo-text-group">
@@ -22,6 +26,7 @@
             <span class="logo-subtitle">MANUAL DE USUARIO</span>
           </div>
         </div>
+
         <div class="global-search-bar">
           <span class="search-icon">🔍</span>
           <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
@@ -38,9 +43,10 @@
           <span class="lang-country">PE</span>
         </div>
       </div>
+
     </div>
   </header>
-
+  
   <!-- 2. Contenedor Maestro de 2 Columnas (.layout-container) -->
   <div class="layout-container">
     
