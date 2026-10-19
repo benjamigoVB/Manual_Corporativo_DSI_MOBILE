@@ -2,7 +2,7 @@
    0. RESET, VIEWPORT & BLOQUEO DE ZOOM / SCROLLBAR
    ========================================================================== */
 html {
-  /* Reserva de forma permanente el espacio de la barra vertical para que nunca dé saltos */
+  /* Reserva de forma permanente el espacio de la barra vertical para que nunca dé saltos en desktop */
   scrollbar-gutter: stable;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -33,7 +33,7 @@ html {
   --font-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
 
-  /* Layout Invariable y Rígido (300px + 920px = 1220px exactos) */
+  /* Layout Base Desktop */
   --sidebar-width: 300px;
   --content-width: 920px;
   --layout-max-width: 1220px;
@@ -81,7 +81,7 @@ img {
 }
 
 /* ==========================================================================
-   1. TOPBAR GLOBAL (Fija a 60px y centrada al eje de 1220px)
+   1. TOPBAR GLOBAL
    ========================================================================== */
 .topbar {
   height: var(--topbar-height);
@@ -244,12 +244,12 @@ img {
 }
 
 /* ==========================================================================
-   2. LAYOUT MAESTRO (1220px Fijos sin oscilaciones)
+   2. LAYOUT MAESTRO
    ========================================================================== */
 .layout,
 .layout-container {
   display: flex;
-  width: var(--layout-max-width);
+  width: 100%;
   max-width: var(--layout-max-width);
   margin: 0 auto;
   min-height: calc(100vh - var(--topbar-height));
@@ -257,7 +257,7 @@ img {
 }
 
 /* ==========================================================================
-   3. SIDEBAR / MENÚ LATERAL (300px Fijo Invariable)
+   3. SIDEBAR / MENÚ LATERAL (Desktop: 300px fijo)
    ========================================================================== */
 .sidebar {
   width: var(--sidebar-width);
@@ -360,14 +360,13 @@ img {
 }
 
 /* ==========================================================================
-   4. CONTENIDO PRINCIPAL (920px Fijo sin bamboleo)
+   4. CONTENIDO PRINCIPAL (Desktop: 920px máx)
    ========================================================================== */
 .content,
 .main-content {
-  width: var(--content-width);
-  min-width: var(--content-width);
+  flex: 1;
+  min-width: 0;
   max-width: var(--content-width);
-  flex: 0 0 var(--content-width);
   padding: 36px 56px 60px;
   background: var(--color-bg);
 }
@@ -572,6 +571,7 @@ img {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .data-table,
@@ -625,6 +625,7 @@ img {
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid var(--color-border);
+  gap: 16px;
 }
 
 .nav-prev,
@@ -658,19 +659,19 @@ img {
 .mobile-showcase {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Centra horizontalmente el marco */
+  align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 24px auto 32px;    /* Centrado en el flujo de lectura */
+  margin: 24px auto 32px;
   text-align: center;
 }
 
 .mobile-mockup-frame {
   width: 100%;
-  max-width: 330px;          /* Ancho óptimo para pantalla móvil */
-  background-color: #0F172A; /* Borde oscuro tipo teléfono */
-  padding: 6px;              /* Grosor del bisel */
-  border-radius: 28px;       /* Curvatura de esquinas */
+  max-width: 330px;
+  background-color: #0F172A;
+  padding: 6px;
+  border-radius: 28px;
   box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.15),
               0 0 0 1px rgba(226, 232, 240, 0.8);
   overflow: hidden;
@@ -683,8 +684,8 @@ img {
   display: block;
   border-radius: 22px;
   object-fit: contain;
+  image-rendering: auto;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
   transform: translateZ(0);
 }
 
@@ -698,7 +699,6 @@ img {
 /* ==========================================================================
    11. RENDERIZADO NÍTIDO Y SOPORTE PARA TODAS LAS CAPTURAS
    ========================================================================== */
-/* Aplica alta nitidez y contención proporcional a cualquier captura dentro de contenedores */
 .screenshot-container img,
 .screenshot-wrapper img,
 .img-placeholder img {
@@ -709,13 +709,129 @@ img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
-/* Evita que los placeholders con imágenes se desborden */
 .img-placeholder:has(img) {
   padding: 0;
   border: none;
   background: transparent;
+}
+
+/* ==========================================================================
+   12. MEDIA QUERIES (COMPORTAMIENTO RESPONSIVE PARA SMARTPHONES Y TABLETS)
+   ========================================================================== */
+
+/* Tablets intermedias (menor a 1024px) */
+@media (max-width: 1024px) {
+  .topbar-inner {
+    padding: 0 16px;
+  }
+  
+  .global-search-bar {
+    width: 260px;
+  }
+  
+  .main-content {
+    padding: 28px 32px 48px;
+  }
+}
+
+/* Teléfonos y pantallas móviles (menor a 768px) */
+@media (max-width: 768px) {
+  /* Elimina el forzado de barra de desplazamiento fija en celular */
+  html {
+    scrollbar-gutter: auto;
+    overflow-y: auto;
+  }
+
+  /* 1. Header adaptativo */
+  .topbar {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .topbar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 0 16px;
+  }
+
+  .topbar-left {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .global-search-bar {
+    width: 100%; /* El buscador se expande al ancho del celular */
+  }
+
+  .topbar-right {
+    display: none; /* Oculta enlaces secundarios en celulares para despejar espacio */
+  }
+
+  /* 2. El layout cambia de fila horizontal a columna vertical */
+  .layout-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  /* 3. Menú lateral / Sidebar colapsable encima del contenido */
+  .sidebar {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    flex: none;
+    height: auto;
+    max-height: 280px; /* Scroll interno en caso de navegar el árbol */
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 16px;
+  }
+
+  /* 4. Contenido principal a pantalla completa sin desbordarse */
+  .main-content {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px 16px 40px;
+  }
+
+  .page-title {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .lead-text {
+    font-size: 14px;
+  }
+
+  /* 5. Grillas de 2 y 3 columnas pasan a 1 sola columna vertical */
+  .cards-grid,
+  .cards-grid[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* 6. Las capturas de celular ocupan el ancho natural de la pantalla */
+  .mobile-mockup-frame {
+    max-width: 290px; /* Adaptado al ancho de terminales móviles */
+  }
+
+  /* 7. Tablas con scroll horizontal táctil suave */
+  .table-container {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* 8. Paginación apilada */
+  .pagination-footer {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav-next {
+    align-items: flex-start;
+  }
 }
