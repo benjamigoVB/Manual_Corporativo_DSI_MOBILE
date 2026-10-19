@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>1.1 Cómo Crear una Nota de Pedido - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global (1220px Fijo Centrado) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas (.layout-container) -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo (300px Fijo) -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li class="active">
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-registrar-cliente.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal (.main-content, máx. 920px) -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>Docs</span>
+        <span class="sep">&gt;</span>
+        <span>Gestión de Notas de Pedido</span>
+        <span class="sep">&gt;</span>
+        <span class="current">1.2 Flujo Completo de Pedido</span>
+      </nav>
+
+      <!-- Encabezado de la Pantalla -->
+      <header class="content-header">
+        <div class="badge-row" style="margin-bottom: 8px;">
+          <span class="tag" style="background:#E0F2FE; color:#0369A1; font-weight:700;">PROCESO PASO A PASO</span>
+          <span class="tag" style="background:#F1F5F9; color:#475569;">DOC-ID: DSI-MOB-12</span>
+        </div>
+        <h1 class="page-title">1.1 Cómo Crear una Nota de Pedido</h1>
+        <p class="lead-text">
+          Guía completa del vendedor para registrar una venta en ruta: desde elegir al cliente de tu cartera hasta enviar el pedido y generar el comprobante de impresión[cite: 1, 9].
+        </p>
+
+        <div class="meta-tags">
+          <span class="tag">⏱️ Tiempo estimado: 4 min de lectura</span>
+          <span class="tag">👤 Módulo: Fuerza de Ventas (Ruta)</span>
+          <span class="tag">🔄 Pasos continuos: 9 etapas unificadas</span>
+        </div>
+      </header>
+
+      <!-- ==========================================
+           PASO 1
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 1: Crear Nota de Pedido</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 1 de 9</span>
+        </div>
+        <p class="section-text">
+          En la pantalla inicial de la app hay dos formas de poder crear una Nota de Pedido, una es a traves del botón <strong>+</strong> y otra desde el Menú (el botón con tres rayas) que está arriba a la derecha de la pantalla[cite: 1, 9].
+        </p>
+
+        <!-- 1.1 Botón (+) -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:16px; color:#0F172A;">1.1 BOTÓN (+)</h3>
+        <p class="section-text">CON EL BOTÓN AZUL (+) PODEMOS CREAR UNA NUEVA NP[cite: 1, 9].</p>
+        
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 3.png" 
+                 alt="Crear Nota de Pedido con botón flotante (+)" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Ubicación del botón flotante (+) en la bandeja principal</span>
+        </div>
+
+        <!-- 1.2 Menú Hamburguesa -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">1.2 BOTÓN MENÚ DESPLEGABLE (☰)</h3>
+        <p class="section-text">
+          Presionamos el botón que está en la esquina superior derecha y se abrirá una subpantalla, LUEGO SELECCIONAMOS LA OPCION NUEVA NOTA DE PEDIDO[cite: 1, 9].
+        </p>
+
+        <!-- Grilla de 2 columnas paralela para capturas 1.2A y 1.2B -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/CREAR_NP/image 4.png" 
+                   alt="Menú lateral desplegado desde esquina superior derecha" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Menú lateral desplegado desde esquina superior derecha</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/CREAR_NP/image 5 (2).png"
+                   alt="Selección activa de la opción Nueva Nota de Pedido" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Selección activa de la opción 'Nueva Nota de Pedido'</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 2
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 2: Selección del Cliente (Mi Cartera)</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 2 de 9</span>
+        </div>
+        <p class="section-text">
+          En la pestaña <strong>Mi Cartera</strong> aparecerán los clientes asignados al vendedor, busca y selecciona al cliente[cite: 1, 9]. El sistema te mostrará su límite de crédito y su saldo por cobrar para validar si puede comprar[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 5.png" 
+                 alt="Lista de clientes asignados al Vendedor" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Pestaña Mi Cartera con saldos y créditos visibles</span>
+        </div>
+
+        <p class="section-text" style="margin-top: 16px;">
+          En la pestaña 'Todos los clientes', se podrá observar todos los clientes que están registrados en el sistema pero al querer hacer una NP para un cliente que no está asignado al final del proceso la app no dejará grabarlo[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 6 (2).png" 
+                 alt="Lista de Clientes totales registrados en el sistema" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Pestaña de consulta global del directorio</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 3
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 3: Selección de Productos y Cantidades</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 3 de 9</span>
+        </div>
+        <p class="section-text">
+          Usa el buscador para localizar repuestos o artículos[cite: 1, 9]. Ajusta la cantidad con los botones (+) y (-)[cite: 1, 9]. La barra superior azul irá calculando el total de la compra en tiempo real según el stock disponible en almacén[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 6.png" 
+                 alt="Catálogo de Productos con cantidades y carrito" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Barra azul superior con acumulado de compra y controles numéricos</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 4
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 4: Forma de Cobro</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 4 de 9</span>
+        </div>
+        <p class="section-text">
+          Primero, selecciona cómo pagará el cliente (Contado, Crédito, Letra o NC)[cite: 1, 9]. Luego tocar <strong>Continuar</strong>[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 7.png" 
+                 alt="Selección de Forma de Cobro" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Ventana de condiciones comerciales de pago</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 5
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 5: Tipo de Entrega</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 5 de 9</span>
+        </div>
+        <p class="section-text">
+          Elige el destino de la mercadería: Local del Cliente, Recojo en Almacén o Envío por Transportista[cite: 1, 9].
+        </p>
+
+        <!-- 5.1 Local del cliente -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:16px; color:#0F172A;">5.1 Local del cliente</h3>
+        <p class="section-text">Si elige Local del Cliente: Solo confirma la dirección registrada[cite: 1, 9].</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 8.png" 
+                 alt="Seleccionar Local del cliente" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Dirección confirmada en ficha del cliente</span>
+        </div>
+
+        <!-- 5.2 Recojo en almacén -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">5.2 Recojo en almacén</h3>
+        <p class="section-text">Si elige Recojo en Almacén: No se requiere dirección ni agencia[cite: 1, 9].</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 9 (2).png" 
+                 alt="Selecciona el recojo en almacén" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Modalidad directa de despacho en bodega central</span>
+        </div>
+
+        <!-- 5.3 Recojo por transportista -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">5.3 Recojo por transportista</h3>
+        <p class="section-text">
+          Si elige Entrega por Transportista: Se habilitan obligatoriamente la dirección de despacho y la ventana emergente para buscar/seleccionar la empresa de transporte (EJ: HONDA DEL PERÚ S.A.)[cite: 1, 9].
+        </p>
+
+        <!-- Grilla de 2 columnas paralela para capturas 5.3A y 5.3B -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/CREAR_NP/image 9 (3).png" 
+                   alt="Agencia de transporte asignada" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Formulario con casilla de agencia y dirección</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/CREAR_NP/image 9.png" 
+                   alt="Buscar y seleccionar la Agencia de transporte" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Ventana emergente de agencias habilitadas</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 6
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 6: Resumen, Edición y Aprobación por Ventas</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 6 de 9</span>
+        </div>
+        <p class="section-text">
+          Revisa la lista final[cite: 1, 9]. Puedes tocar el lápiz (✏️) para cambiar cantidades o el tacho (🗑️) para borrar un ítem[cite: 1, 9]. De la misma forma el lápiz también permite editar la Forma de Cobro y el Tipo de Entrega[cite: 1, 9].
+        </p>
+
+        <!-- 6.1 Resumen Local del Cliente -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:16px; color:#0F172A;">6.1 RESUMEN DE NP PARA ENTREGA EN EL LOCAL DEL CLIENTE</h3>
+        <p class="section-text">Al elegir como tipo de entrega el local del cliente, el resumen de la nota de pedido se verá de la siguiente forma[cite: 1, 9]:</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 13.png" 
+                 alt="Resumen de NP al local del cliente" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Previsualización del pedido con destino local</span>
+        </div>
+
+        <!-- 6.2 Resumen Recojo en Almacén -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">6.2 RESUMEN DE NP PARA RECOJO EN ALMACEN</h3>
+        <p class="section-text">Al elegir como tipo de entrega recojo en almacén, el resumen de la nota de pedido se verá de la siguiente forma[cite: 1, 9]:</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 14.png" 
+                 alt="Resumen de NP para recojo en almacén" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Previsualización con entrega en sede central</span>
+        </div>
+
+        <!-- 6.3 Resumen Transportista -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">6.3 RESUMEN DE NP PARA ENTREGAR POR TRANSPORTISTA</h3>
+        <p class="section-text">Al elegir como tipo de entrega entrega por transportista, el resumen de la nota de pedido se verá de la siguiente forma[cite: 1, 9]:</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 15.png" 
+                 alt="Resumen de NP para entrega por Transportista" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Previsualización completa con datos del transportista</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 7
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 7: Grabar Nota de Pedido</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 7 de 9</span>
+        </div>
+        <p class="section-text">
+          Al querer grabar la NP nos aparecerá una ventana pequeña de confirmación donde habrán las opciones de <em>Cancelar</em>, <em>No, solo grabar</em> y <em>Sí, aprobar ventas</em>[cite: 1, 9].
+        </p>
+
+        <!-- Bloques informativos de decisión (Estilo Callouts comparativos) -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0;">
+          <div class="callout-box" style="margin:0; border-left: 4px solid #F59E0B; background-color: #FEF3C7; padding: 14px; border-radius: 8px;">
+            <strong style="color: #92400E; display: block; margin-bottom: 4px;">OPCIÓN: NO, SOLO GRABAR</strong>
+            <span class="tag" style="background:#FDE68A; color:#78350F; font-size:11px; font-weight:700;">Estado: Abierta</span>
+            <p style="margin: 8px 0 0; font-size: 13px; color: #78350F; line-height: 1.4;">
+              El pedido queda guardado como 'Abierta'[cite: 1, 9]. Podrás editarlo más tarde desde tu bandeja si necesitas corregir o agregar productos antes de confirmar[cite: 1, 9].
+            </p>
+          </div>
+
+          <div class="callout-box" style="margin:0; border-left: 4px solid #10B981; background-color: #ECFDF5; padding: 14px; border-radius: 8px;">
+            <strong style="color: #065F46; display: block; margin-bottom: 4px;">OPCIÓN: SÍ, APROBAR VENTAS</strong>
+            <span class="tag" style="background:#A7F3D0; color:#064E3B; font-size:11px; font-weight:700;">Estado: Aprobada</span>
+            <p style="margin: 8px 0 0; font-size: 13px; color: #064E3B; line-height: 1.4;">
+              Congela los precios y reserva el stock inmediatamente para que el área de almacén inicie el empaque y despacho de la mercadería[cite: 1, 9].
+            </p>
+          </div>
+        </div>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 16.png" 
+                 alt="Ventana para aprobar venta" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Diálogo modal con las 3 opciones de grabación</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 8
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 8: Escribir una Nota</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 8 de 9</span>
+        </div>
+        <p class="section-text">
+          Después aparecerá la ventana para colocar una Nota la cual es importante para el despacho, luego de eso <strong>Grabar Pedido</strong>[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 18.png" 
+                 alt="Ventana para escribir una nota" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Campo de observaciones logísticas previas al grabado final</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 9
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="display:flex; justify-content:space-between; align-items:baseline; border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 9: Detalle de la Nota de Pedido</h2>
+          <span style="font-size:12px; font-weight:600; color:#0284C7;">Paso 9 de 9</span>
+        </div>
+        <p class="section-text">
+          Aparecerá una nueva pantalla donde se podrá ver los detalles de la NP que se generó, también se puede apreciar su Histórico y un Comprobante listo para su impresión[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 19.png" 
+                 alt="Ventana para ver detalle de la NP" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Pantalla completa con correlativo asignado y opciones de consulta</span>
+        </div>
+
+        <!-- 9.1 Botón Histórico -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">9.1 BOTÓN HISTÓRICO</h3>
+        <p class="section-text">Al dar clic en el botón Histórico, se podrá ver el estado de la NP y los estados por los que ya pasó[cite: 1, 9].</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 20.png" 
+                 alt="Ventana para ver el Histórico de la NP" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Línea de tiempo de cambios de estado del documento</span>
+        </div>
+
+        <!-- 9.2 Botón Comprobante -->
+        <h3 class="subsection-title" style="font-size:15px; margin-top:20px; color:#0F172A;">9.2 BOTÓN COMPROBANTE</h3>
+        <p class="section-text">Al dar clic en el botón Comprobante, se podrá ver la NP a detalle pero en formato PDF listo para la impresión[cite: 1, 9].</p>
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 21.png" 
+                 alt="Ventana para ver detalle de NP para su impresión" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Visor de PDF generado listo para descargar o imprimir</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           SECCIONES FINALES DE RETORNO Y BANDEJA
+      =========================================== -->
+      <section class="section-block">
+        <h2 class="section-title">Volver a la Bandeja Principal de Pedidos</h2>
+        <p class="section-text">
+          Al regresar a la pantalla de Inicio se podrá ver las NP que están pendientes a Ventas, Despacho, etc[cite: 1, 9]. Veremos si la NP que se creó (NP 001-00000134) está en la pantalla de inicio[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 22-1.png" 
+                 alt="Detalle del Pedido, Histórico y Vista de Impresión en Bandeja" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Nota de pedido reflejada en estado activo dentro de la lista</span>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <h2 class="section-title">Nota de Pedido Pendiente (sin grabar)</h2>
+        <p class="section-text">
+          Al regresar a la pantalla de Inicio se podrá ver las NP que están pendientes a Ventas, Despacho, etc[cite: 1, 9]. Veremos si la NP que se creó (NP 001-00000134) está en la pantalla de inicio[cite: 1, 9].
+        </p>
+
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/CREAR_NP/image 22.png" 
+                 alt="Visualización de NP Pendiente de confirmación" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Bandeja de pedidos mostrando estado temporal 'Abierta'</span>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior Conectada -->
+      <footer class="pagination-footer">
+        <a href="0.2-bandeja-principal.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 0.2 Bandeja Principal</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Revisar lista de pedidos y estados</span>
+        </a>
+        <a href="1.2-aprobaciones.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">1.2 Aprobaciones →</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Aprobación de Ventas y Despacho</span>
+        </a>
+      </footer>
+
+      <!-- Pie de utilidad -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding-top:16px; border-top:1px solid #E2E8F0; font-size:12px; color:#64748B;">
+        <div>¿Te resultó útil esta documentación? <button style="background:none; border:none; cursor:pointer;">👍 Sí</button> <button style="background:none; border:none; cursor:pointer;">👎 No</button></div>
+        <div>Última actualización técnica: Nov 2024 • DSI SAC Helpdesk[cite: 9]</div>
+      </div>
+
+    </main>

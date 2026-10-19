@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>0.2 Bandeja principal - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global (1220px Centrado Rígido) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo (300px Fijo) -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li class="active">
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-registrar-cliente.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal (920px Rígidos) -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>0. Introducción y Configuración</span>
+        <span class="sep">/</span>
+        <span class="current">0.2 Bandeja principal</span>
+      </nav>
+
+      <!-- Encabezado de la Pantalla -->
+      <header class="content-header">
+        <h1 class="page-title">0.2 Bandeja Principal de Notas de Pedido</h1>
+        <p class="lead-text">
+          Esta es la pantalla principal del vendedor. Desde aquí puedes revisar el estado de tus pedidos registrados, buscar ventas anteriores y crear una nueva Nota de Pedido tocando el botón azul (+).
+        </p>
+
+        <div class="meta-tags">
+          <span class="tag">Tiempo de lectura: 3 min</span>
+          <span class="tag">Módulo: Fuerza de Ventas</span>
+          <span class="tag">Alcance: Pedidos &amp; Facturación</span>
+        </div>
+      </header>
+
+      <!-- Consejo para el Vendedor / Callout Box -->
+      <section class="callout-box">
+        <div class="callout-content">
+          <span class="warning-icon">💡</span>
+          <p>
+            <strong>CONSEJO PARA EL VENDEDOR:</strong> Si un pedido está en estado <strong>'Abierta'</strong>, puedes tocar en <strong>'Editar'</strong> para corregir productos o cantidades. Si tocas en <strong>'Aprobar Ventas'</strong>, el pedido se bloqueará y pasará directo al área de almacén para que preparen el despacho.
+          </p>
+        </div>
+      </section>
+
+      <!-- Vista Previa de Interfaz Móvil (Bandeja de Pedidos) -->
+        <section class="section-block">
+          <h2 class="section-title">Vista Previa de Interfaz Móvil (Bandeja de Pedidos)</h2>
+          <p class="section-subtext">Resolución nativa: 360 x 800 dp</p>
+
+          <!-- Envoltorio centrado y optimizado -->
+          <div class="mobile-showcase">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BANDEJA_PRINCIPAL/image 2.png" 
+                  alt="Bandeja de Pedidos del Vendedor DSI Mobile" 
+                  class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Bandeja principal con pestañas Pendientes/Finalizadas y botón flotante (+)</span>
+          </div>
+        </section>
+
+      <!-- Guía y Tabla de Opciones -->
+      <section class="section-block">
+        <h2 class="section-title">Guía de Opciones de la Bandeja de Pedidos</h2>
+        <p class="section-subtext">Detalle de controles y comportamiento operativo:</p>
+        
+        <div class="table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th style="width: 8%; text-align: center;">N°</th>
+                <th style="width: 24%;">OPCIÓN / BOTÓN</th>
+                <th style="width: 34%;">¿QUÉ HACE?</th>
+                <th style="width: 34%;">REGLA O CONSEJO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: #64748B;">1</td>
+                <td class="col-highlight">Buscador y Pestañas</td>
+                <td>Permite filtrar por nombre de cliente y separar pedidos pendientes de los ya terminados.</td>
+                <td>Usa <strong>'Pendientes'</strong> para ver lo que aún no se ha despachado.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: #64748B;">2</td>
+                <td class="col-highlight">Estado del Pedido</td>
+                <td>Indica en qué etapa va el pedido (ejemplo: <em>'Abierta'</em> o <em>'Aprobación de Despacho'</em>).</td>
+                <td>Si dice <strong>'Abierta'</strong>, el pedido aún no ha sido confirmado para despacho.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: #64748B;">3</td>
+                <td class="col-highlight">Botón Editar / Aprobar</td>
+                <td><em>'Editar'</em> te permite cambiar productos; <em>'Aprobar Ventas'</em> confirma el pedido formalmente.</td>
+                <td>Solo puedes editar pedidos que sigan en estado <strong>'Abierta'</strong>.</td>
+              </tr>
+              <tr>
+                <td style="text-align: center; font-weight: 700; color: #64748B;">4</td>
+                <td class="col-highlight">Botón Nuevo (+)</td>
+                <td>Abre el formulario en blanco para registrar una nueva Nota de Pedido.</td>
+                <td>Tócalo para iniciar una venta con un cliente de tu cartera.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior (Conectada al Sidebar Oficial) -->
+      <footer class="pagination-footer">
+        <a href="01-login.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 0.1 Login e inicio de sesion</span>
+        </a>
+        <a href="03-generalidades.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">0.3 Generalidades y botones basicos →</span>
+        </a>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

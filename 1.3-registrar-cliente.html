@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>1.3 Registrar Cliente Rápido desde la Nota de Pedido - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global (1220px Fijo Centrado) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas (.layout-container) -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo (300px Fijo) -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li class="active">
+              <a href="1.3-registrar-clientes.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal (.main-content, máx. 920px) -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>Docs</span>
+        <span class="sep">&gt;</span>
+        <span>Gestión de Notas de Pedido</span>
+        <span class="sep">&gt;</span>
+        <span>Flujo de Pedido</span>
+        <span class="sep">&gt;</span>
+        <span class="current">1.2.1 Registrar Cliente Rápido</span>
+      </nav>
+
+      <!-- Encabezado de la Pantalla -->
+      <header class="content-header">
+        <div class="badge-row" style="margin-bottom: 8px;">
+          <span class="tag" style="background:#E0F2FE; color:#0369A1; font-weight:700;">ALTA EN RUTA</span>
+          <span class="tag" style="background:#F1F5F9; color:#475569;">DOC-ID: DSI-MOB-14</span>
+        </div>
+        <h1 class="page-title">1.3 Registrar Cliente Rápido desde la Nota de Pedido</h1>
+        <p class="lead-text">
+          Guía paso a paso para dar de alta a un cliente nuevo directamente desde la ruta[cite: 4, 15]. Al presionar el botón (+👤) en la cabecera del pedido, se abrirá el formulario de registro rápido con consulta automática de datos fiscales y asignación inmediata a tu cartera comercial[cite: 4, 15].
+        </p>
+
+        <div class="meta-tags">
+          <span class="tag">⏱️ Tipo de lectura: 3 min</span>
+          <span class="tag">👤 Módulo: Cartera y Alta Exprés</span>
+          <span class="tag">📱 Dispositivos: Android / Celular en Ruta</span>
+        </div>
+      </header>
+
+      <!-- Sección de Botón de Acceso (+👤) en Cabecera -->
+      <section class="section-block">
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/REGISTRAR_CLIENTE/image 52.png" 
+                 alt="Ubicación del botón (+👤) en la cabecera del pedido" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Botón (+👤) para dar de alta a un cliente rápido en cabecera</span>
+        </div>
+      </section>
+
+      <!-- 1. Consulta Automática de Datos Fiscales -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">1. Consulta Automática de Datos Fiscales (DNI/RUC)</h2>
+        </div>
+        <p class="section-text">
+          Al ingresar a la pantalla, el primer campo es <strong>DNI/RUC</strong>[cite: 4, 15]. Escribe los 8 dígitos para personas naturales o los 11 dígitos para empresas con negocio[cite: 4, 15]. El sistema se conectará a la base de datos oficial y autocompletará sin errores: <em>Nombre o Razón Social</em>, <em>Dirección de Facturación</em> y el <em>Ubigeo</em> correspondiente[cite: 4, 15].
+        </p>
+
+        <!-- Grilla de 2 capturas en paralelo -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/REGISTRAR_CLIENTE/image 53.png" 
+                   alt="Formulario de Registro Cliente Rápido listo para ingreso de DNI o RUC" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Formulario limpio para ingreso de documento fiscal</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/REGISTRAR_CLIENTE/image 54.png" 
+                   alt="Consulta automática con datos de SUNAT o RENIEC autocompletados" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Autocompletado de Razón Social, Dirección y Ubigeo</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 2. Información de Contacto en el Punto de Venta -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">2. Información de Contacto en el Punto de Venta</h2>
+        </div>
+        <p class="section-text">
+          Los campos de <em>"Teléfono"</em>, <em>"Correo Electrónico"</em> y <em>"Nombre de Referencia Contacto"</em> son opcionales pero muy recomendables[cite: 4, 15]. Registrar el nombre de contacto o la referencia física del local permite que el despachador o transportista ubique con facilidad el taller o tienda del cliente[cite: 4, 15].
+        </p>
+      </section>
+
+      <!-- 3. Asignación Comercial: Precios y Forma de Pago -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">3. Asignación Comercial: Precios y Forma de Pago</h2>
+        </div>
+        <p class="section-text">
+          Para finalizar el registro, debes completar las dos listas desplegables obligatorias: en <strong>Categoría de Precios</strong> defines la lista de precios con la que comprará (Público, Mayorista, etc.), y en <strong>Forma de Cobro</strong> determinas si sus pedidos se emitirán al Contado o Crédito[cite: 4, 15].
+        </p>
+      </section>
+
+      <!-- 4. Guardar y Retornar al Pedido -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">4. Guardar y Retornar al Pedido</h2>
+        </div>
+        <p class="section-text">
+          Al presionar el botón azul <strong>Guardar Cliente</strong>, el nuevo cliente quedará grabado en el sistema, se integrará a "Mi Cartera" y la app te llevará automáticamente al catálogo de productos para continuar con la venta[cite: 4, 15].
+        </p>
+
+        <!-- Captura individual centrada de guardado -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/REGISTRO_CLIENTE/cliente_guardado_toast.png" 
+                 alt="Guardado exitoso con botón azul y confirmación en pantalla" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Confirmación de cliente grabado y retorno al pedido</span>
+        </div>
+      </section>
+
+      <!-- Callout: Validación de clientes duplicados -->
+      <div class="callout-box" style="border-left: 4px solid #D97706; background-color: #FFFBEB; padding: 16px 20px; border-radius: 8px; margin: 28px 0;">
+        <strong style="color: #92400E; display: block; font-size: 14px; margin-bottom: 4px;">⚠️ Validación de clientes duplicados</strong>
+        <p style="margin: 0; font-size: 13px; color: #78350F; line-height: 1.5;">
+          Si ingresas un número de DNI o RUC que ya se encuentra registrado en el sistema, la aplicación te mostrará un aviso de advertencia indicando que el cliente ya existe[cite: 4, 15]. Esto evita crear fichas duplicadas y te permite buscarlo directamente en tu lista de clientes sin tener que registrarlo otra vez[cite: 4, 15].
+        </p>
+      </div>
+
+      <!-- ==========================================
+           TABLA TÉCNICA: FICHA DETALLADA DE CAMPOS
+      =========================================== -->
+      <section class="section-block">
+        <h2 class="section-title">Ficha Detallada de Campos: Formulario Registrar Cliente Rápido</h2>
+        <p class="section-text">
+          Especificación completa de controles de entrada, obligatoriedad y validaciones de negocio en la aplicación[cite: 4, 15]:
+        </p>
+
+        <div class="table-container" style="overflow-x: auto; margin-top: 14px;">
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; font-size: 13px;">
+            <thead>
+              <tr style="background-color: #F1F5F9; border-bottom: 2px solid #E2E8F0; text-align: left;">
+                <th style="padding: 10px 12px; color: #0F172A;">CAMPO / CONTROL</th>
+                <th style="padding: 10px 12px; color: #0F172A;">TIPO DE ENTRADA</th>
+                <th style="padding: 10px 12px; color: #0F172A;">OBLIGATORIO</th>
+                <th style="padding: 10px 12px; color: #0F172A;">¿CÓMO SE LLENA? / REGLA DE NEGOCIO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">DNI/RUC</td>
+                <td style="padding: 10px 12px;">Numérico (8 u 11 dígitos)[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Manual[cite: 4, 15]. Al completar los dígitos se dispara la búsqueda oficial[cite: 4, 15]. Si ya existe, emite alerta de duplicidad[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Nombre / Razón Social</td>
+                <td style="padding: 10px 12px;">Texto alfanumérico[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Automático[cite: 4, 15]. Se llena con la razón social oficial de SUNAT o nombres completos de RENIEC[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Dirección de Facturación</td>
+                <td style="padding: 10px 12px;">Texto alfanumérico[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Automático[cite: 4, 15]. Carga el domicilio fiscal declarado ante la entidad tributaria[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Ubigeo</td>
+                <td style="padding: 10px 12px;">Selector con Lupa[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Automático / Búsqueda[cite: 4, 15]. Asigna Departamento, Provincia y Distrito oficial para entrega[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Teléfono</td>
+                <td style="padding: 10px 12px;">Numérico / Texto[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Opcional</span></td>
+                <td style="padding: 10px 12px;">Manual[cite: 4, 15]. Teléfono celular o fijo para coordinaciones de despacho y entrega[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Correo Electrónico</td>
+                <td style="padding: 10px 12px;">Texto libre (correo)[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Opcional</span></td>
+                <td style="padding: 10px 12px;">Manual[cite: 4, 15]. Dirección electrónica para el envío de comprobantes digitales[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Nombre de Referencia / Contacto</td>
+                <td style="padding: 10px 12px;">Texto libre[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Opcional</span></td>
+                <td style="padding: 10px 12px;">Manual[cite: 4, 15]. Persona encargada en el taller o punto de referencia físico para el reparto[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Categoría de Precios</td>
+                <td style="padding: 10px 12px;">Menú Desplegable (▼)[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Selector[cite: 4, 15]. Asigna la lista de precios oficial (Público, Mayorista, etc.)[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Forma de Cobro</td>
+                <td style="padding: 10px 12px;">Menú Desplegable (▼)[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEE2E2; color:#991B1B; font-size:11px; font-weight:700;">Sí (*)</span></td>
+                <td style="padding: 10px 12px;">Selector[cite: 4, 15]. Fija la condición comercial por defecto (Contado o Crédito)[cite: 4, 15].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Botón Guardar Cliente</td>
+                <td style="padding: 10px 12px;">Botón de Acción Azul[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#E0F2FE; color:#0369A1; font-size:11px; font-weight:700;">Primario</span></td>
+                <td style="padding: 10px 12px;">Valida campos con asterisco (*), registra al cliente y te regresa a la toma del pedido[cite: 4, 15].</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Botón Atrás</td>
+                <td style="padding: 10px 12px;">Botón de Texto[cite: 4, 15]</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Operativo</span></td>
+                <td style="padding: 10px 12px;">Cancela el registro actual y te regresa a la pantalla anterior sin guardar cambios[cite: 4, 15].</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior Conectada -->
+      <footer class="pagination-footer" style="margin-top: 36px; display: flex; justify-content: space-between; border-top: 1px solid #E2E8F0; padding-top: 20px;">
+        <a href="1.1-crear-nota-pedido.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub" style="font-size: 10px; font-weight: 700; color: #64748B; text-transform: uppercase;">ANTERIOR: PASO 1 SELECCIÓN DE CLIENTE</span>
+          <span class="nav-link" style="display: block; font-weight: 600; color: #0284C7;">← Búsqueda en Mi Cartera</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Selección previa antes de crear el pedido[cite: 4, 15]</span>
+        </a>
+        <a href="1.1-crear-nota-pedido.html#paso-3" class="nav-next" style="text-decoration: none; text-align: right;">
+          <span class="nav-sub" style="font-size: 10px; font-weight: 700; color: #64748B; text-transform: uppercase;">SIGUIENTE: PASO 2 SELECCIÓN DE ARTÍCULO</span>
+          <span class="nav-link" style="display: block; font-weight: 600; color: #0284C7;">Agregar repuestos al pedido →</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Continuar con la selección de productos y cantidades[cite: 4, 15]</span>
+        </a>
+      </footer>
+
+      <!-- Pie de utilidad -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding-top:16px; border-top:1px solid #E2E8F0; font-size:12px; color:#64748B;">
+        <div>¿Te resultó útil esta documentación? <button style="background:none; border:none; cursor:pointer;">👍 Sí</button> <button style="background:none; border:none; cursor:pointer;">👎 No</button></div>
+        <div>DSI SAC - 2024 • Helpdesk[cite: 4, 15]</div>
+      </div>
+
+    </main>

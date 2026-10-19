@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>0.1 Login e inicio de sesion - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global (1440px Centrado, Fijo) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo (300px fijo con el árbol acordado) -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li class="active">
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-registrar-cliente.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal (Max 920px) -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>0. Introducción y Configuración</span>
+        <span class="sep">/</span>
+        <span class="current">0.1 Login e inicio de sesion</span>
+      </nav>
+
+      <!-- Encabezado de Página -->
+      <header class="content-header">
+        <h1 class="page-title">0.1 Inicio de Sesión en DSI Mobile</h1>
+        <p class="lead-text">
+          Procedimiento de autenticación del vendedor en la aplicación móvil DSI Mobile mediante credenciales corporativas, vinculando la sesión activa con su cartera comercial asignada en el ERP central DSI-NET.
+        </p>
+
+        <div class="meta-tags">
+          <span class="tag">Tiempo de lectura: 3 min</span>
+          <span class="tag">Protocolo: OAuth 2.0 / JWT</span>
+          <span class="tag">Alcance: Rol Vendedor / Pre-venta</span>
+        </div>
+      </header>
+
+      <!-- Nota Técnica / Callout Box -->
+      <section class="callout-box">
+        <div class="callout-content">
+          <span class="warning-icon">⚠</span>
+          <p>
+            <strong>ACCESO EXCLUSIVO PARA FUERZA DE VENTAS:</strong> Las credenciales de usuario son asignadas y autorizadas desde el ERP central DSI-NET. Al iniciar sesión, la app descarga automáticamente la cartera de clientes y listas de precios correspondientes a su perfil de vendedor.
+          </p>
+        </div>
+      </section>
+
+      <!-- Vista Previa de Interfaz Móvil (Pantalla de Acceso) -->
+      <section class="section-block">
+        <h2 class="section-title">Vista Previa de Interfaz Móvil (Pantalla de Acceso)</h2>
+        <p class="section-subtext">Resolución nativa de referencia: 360 x 800 dp</p>
+
+        <!-- Envoltorio centrado -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/GENERALIDADES/LOGIN/image 1.png" 
+                alt="Pantalla de inicio de sesión DSI Mobile" 
+                class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Pantalla de acceso con campos de credenciales y botón ingresar</span>
+        </div>
+      </section>
+
+      <!-- Tabla Técnica de Campos -->
+      <section class="section-block">
+        <h2 class="section-title">Ficha Técnica de Campos de Acceso</h2>
+        <p class="section-subtext">Estructura y reglas de validación de los datos de entrada:</p>
+        
+        <div class="table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">CAMPO / CONTROL</th>
+                <th style="width: 20%;">TIPO DE ENTRADA</th>
+                <th style="width: 14%;">OBLIGATORIO</th>
+                <th style="width: 44%;">DESCRIPCIÓN Y REGLA DE NEGOCIO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-highlight">Usuario</td>
+                <td>Correo electrónico</td>
+                <td>Sí</td>
+                <td>Correo corporativo del vendedor registrado en DSI-NET. Identifica la cartera asignada y sincroniza las listas de precios personalizadas al dispositivo.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Contraseña</td>
+                <td>Alfanumérico protegido</td>
+                <td>Sí</td>
+                <td>Clave cifrada de acceso. Incluye icono de ojo para alternar la visualización de los caracteres ingresados antes de autenticar contra el servidor.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Recordar sesión</td>
+                <td>Casilla de verificación</td>
+                <td>Opcional</td>
+                <td>Mantiene el token de autorización activo en el almacenamiento local seguro del dispositivo, permitiendo operar en ruta sin solicitar credenciales nuevamente.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Botón Ingresar</td>
+                <td>Botón de acción primaria</td>
+                <td>Sí</td>
+                <td>Valida credenciales contra la API DSI-NET. Si es exitoso, inicia la descarga incremental de maestros locales (clientes, stock, deuda) y redirige a la bandeja principal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior (Conectada al Sidebar Oficial) -->
+      <footer class="pagination-footer">
+        <a href="index.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 0.0 ¿Qué es DSINET MOBILE?</span>
+        </a>
+        <a href="02-bandeja-principal.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">0.2 Bandeja principal →</span>
+        </a>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

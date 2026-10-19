@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+  <title>0.3 Generalidades y Botones Básicos de la Aplicación - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li class="active">
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-registrar-cliente.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+   <!-- Columna 2: Contenido Principal -->
+<main class="main-content">
+  
+  <!-- Migas de pan -->
+  <nav class="breadcrumbs">
+    <span>0. Introducción y Configuración</span>
+    <span class="sep">/</span>
+    <span class="current">0.3 Generalidades y Botones Básicos de la Aplicación</span>
+  </nav>
+
+  <!-- Título Principal -->
+  <header class="content-header">
+    <h1 class="page-title">0.3 Generalidades y Botones Básicos de la Aplicación</h1>
+    <p class="lead-text">
+      Conoce los botones y herramientas principales ubicados en la barra superior de la aplicación[cite: 1, 3]. Te permitirán moverte entre pantallas, recibir avisos importantes, buscar tus ventas y configurar el acceso rápido con huella dactilar[cite: 1, 3].
+    </p>
+  </header>
+
+  <!-- Consejo para el vendedor -->
+  <section class="callout-box">
+    <div class="callout-content">
+      <span class="warning-icon">💡</span>
+      <p>
+        <strong>Consejo para el vendedor:</strong> Si observas un <strong>punto rojo sobre la campana</strong>, significa que dejaste una Nota de Pedido guardada a medias sin terminar[cite: 1, 3]. Tócala de inmediato para recuperar tu pedido y evitar volver a digitar los productos desde cero[cite: 1, 3].
+      </p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 1: CAMPANA DE NOTIFICACIONES -->
+  <section class="section-block">
+    <h2 class="section-title">1. Campana de Notificaciones (Alertas de Pedidos)</h2>
+    <p class="section-subtext">
+      Se ubica en la esquina superior derecha[cite: 1, 3]. Te avisa cuando hay pedidos pendientes o acciones sin completar en tu sesión[cite: 1, 3].
+    </p>
+
+    <!-- Grilla de 2 columnas para las capturas de la Campana -->
+    <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 24px;">
+      
+      <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+          <img src="IMAGENES/GENERALIDADES/BOTONES/image 37.png" 
+               alt="Campana con indicador / flecha roja" 
+               class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Ubicación del indicador rojo de alerta</span>
+      </div>
+
+      <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+          <img src="IMAGENES/GENERALIDADES/BOTONES/image 38.png" 
+               alt="Detalle de pedidos pendientes de aprobación" 
+               class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Detalle de pedidos recuperables pendientes</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 2: MENÚ DE 3 RAYAS -->
+  <section class="section-block">
+    <h2 class="section-title">2. Menú de 3 Rayas (Opciones y Configuración)</h2>
+    <p class="section-subtext">
+      Al tocar el botón lateral desplegable (☰) en la cabecera, se abre una ventana lateral con accesos directos clave[cite: 1, 3]:
+    </p>
+
+    <!-- Grilla de 2 columnas para el despliegue general del menú -->
+    <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 24px;">
+      
+      <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+          <img src="IMAGENES/GENERALIDADES/BOTONES/image 39.png" 
+               alt="Ubicación del botón ☰ en barra superior" 
+               class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Ubicación del botón ☰ en cabecera</span>
+      </div>
+
+      <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+          <img src="IMAGENES/GENERALIDADES/BOTONES/image 40.png" 
+               alt="Menú lateral desplegado con las 4 opciones" 
+               class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Menú lateral con accesos directos</span>
+      </div>
+
+    </div>
+
+    <!-- Detalle de sub-opciones con capturas individuales -->
+    <div class="menu-subitems-details" style="display: flex; flex-direction: column; gap: 24px; margin-top: 16px;">
+      
+      <!-- 2.1 Listado -->
+    <div class="feature-card" style="padding: 20px;">
+      <h3>2.1 Listado de notas de pedido</h3>
+      <p style="margin-bottom: 16px;">Te regresa a la bandeja principal para revisar todas las notas emitidas y su estado.</p>
+      
+      <!-- Grilla de 2 columnas para colocar las imágenes lado a lado -->
+      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 0;">
+        
+        <!-- Imagen 1 (Izquierda) -->
+        <div class="mobile-showcase" style="margin: 0 auto;">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/GENERALIDADES/BOTONES/image 42 (2).png" 
+                alt="Opción Listado de notas de pedido seleccionada" 
+                class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Selección de Listado de notas de pedido</span>
+        </div>
+
+        <!-- Imagen 2 (Derecha) -->
+        <div class="mobile-showcase" style="margin: 0 auto;">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/GENERALIDADES/BOTONES/image 42 (3).png" 
+                alt="Bandeja principal de pedidos recuperada" 
+                class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Bandeja de pedidos</span>
+        </div>
+
+      </div>
+    </div>
+
+      <!-- 2.2 Nueva NP -->
+      <div class="feature-card" style="padding: 20px;">
+        <h3>2.2 Nueva nota de pedido</h3>
+        <p style="margin-bottom: 16px;">Te lleva directamente al paso 1 para iniciar una nueva venta en ruta de inmediato[cite: 1, 3].</p>
+        
+        <!-- Grilla de 2 columnas para mostrar ambas capturas lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 0;">
+          
+          <!-- Imagen 1: Opción en el Menú -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 43.png" 
+                  alt="Opción Nueva nota de pedido seleccionada" 
+                  class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Selección de Nueva nota de pedido en menú</span>
+          </div>
+
+          <!-- Imagen 2: Pantalla resultante (Paso 1) -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 47.png"  
+                  alt="Pantalla inicial de selección de cliente" 
+                  class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Vista para crear una Nota de Pedido</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.3 Modo oscuro -->
+      <div class="feature-card" style="padding: 20px;">
+        <h3>2.3 Modo oscuro</h3>
+        <p style="margin-bottom: 16px;">Activa el tema visual oscuro para cuidar tu vista y ahorrar batería en entornos con baja iluminación[cite: 1, 3].</p>
+        
+        <!-- Grilla de 2 columnas para mostrar la activación y el resultado lado a lado -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 0;">
+          
+          <!-- Imagen 1: Switch de Modo Oscuro -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 48.png" 
+                  alt="Interruptor de Modo oscuro" 
+                  class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Conmutador de tema visual nocturno</span>
+          </div>
+
+          <!-- Imagen 2: Vista previa de la interfaz en Modo Oscuro -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 49.png" 
+                  alt="Interfaz en modo oscuro activado" 
+                  class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Interfaz de la aplicación en tema oscuro</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2.4 Configuración y Huella -->
+      <div class="feature-card" style="padding: 20px;">
+        <h3>2.4 Configuración</h3>
+        <p style="margin-bottom: 12px;">Abre la ventana técnica para activar el inicio de sesión biométrico con huella dactilar[cite: 1, 3].</p>
+        
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 16px;">
+          
+          <div class="mobile-showcase">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 50.png" 
+                   alt="Botón Configuración" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Acceso al panel de Configuración</span>
+          </div>
+
+          <div class="mobile-showcase">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/GENERALIDADES/BOTONES/image 51.png" 
+                   alt="Pantalla Ajustes / Huella dactilar" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Activación de lector de huella dactilar</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: BARRA DE BÚSQUEDA Y FLECHA DE REGRESO -->
+  <section class="section-block">
+    <h2 class="section-title">3. Barra de Búsqueda y Flecha de Regreso</h2>
+    <p class="section-subtext">Herramientas esenciales para filtrar registros y retroceder con seguridad[cite: 1, 3]:</p>
+
+    <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+      
+      <!-- Columna Izquierda: Buscador -->
+      <div class="feature-card" style="padding: 20px;">
+        <div class="feature-icon">🔍</div>
+        <h3>Barra de Búsqueda (Lupa)</h3>
+        <p style="margin-bottom: 16px;">
+          Escribe el nombre del cliente, RUC, DNI o número de pedido para filtrar en segundos[cite: 1, 3].
+        </p>
+        
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/GENERALIDADES/BOTONES/image 59.png" 
+                 alt="Barra de Búsqueda activa" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Filtro de registros por texto o correlativo</span>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Flecha Atrás -->
+      <div class="feature-card" style="padding: 20px;">
+        <div class="feature-icon">←</div>
+        <h3>Flecha de Regreso (←)</h3>
+        <p style="margin-bottom: 16px;">
+          Ubicada en la esquina superior izquierda. Te permite retroceder a la vista anterior de forma segura[cite: 1, 3].
+        </p>
+        
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/GENERALIDADES/BOTONES/image 60.png"
+                 alt="Flecha de Regreso destacada" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Navegación segura hacia el paso anterior</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TABLA RESUMEN -->
+  <section class="section-block">
+    <h2 class="section-title">Resumen de Botones y Funciones Básicas</h2>
+    <div class="table-container">
+      <table class="tech-table">
+        <thead>
+          <tr>
+            <th style="width: 22%;">BOTÓN / CONTROL</th>
+            <th style="width: 20%;">UBICACIÓN</th>
+            <th style="width: 20%;">INDICADOR / ESTADO</th>
+            <th style="width: 38%;">FUNCIÓN PRINCIPAL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-highlight">Campana de Alertas (🔔)</td>
+            <td>Superior derecha[cite: 1, 3]</td>
+            <td>Punto rojo visible[cite: 1, 3]</td>
+            <td>Avisa si tienes una Nota de Pedido guardada a medias sin terminar[cite: 1, 3].</td>
+          </tr>
+          <tr>
+            <td class="col-highlight">Menú de 3 Rayas (☰)</td>
+            <td>Superior derecha[cite: 1, 3]</td>
+            <td>Menú desplegable[cite: 1, 3]</td>
+            <td>Abre las opciones rápidas: lista de pedidos, nuevo pedido, modo oscuro y huella[cite: 1, 3].</td>
+          </tr>
+          <tr>
+            <td class="col-highlight">Barra de Búsqueda (🔍)</td>
+            <td>Parte superior central[cite: 1, 3]</td>
+            <td>Caja de texto interactiva[cite: 1, 3]</td>
+            <td>Filtra al instante pedidos o clientes por nombre, RUC/DNI o número[cite: 1, 3].</td>
+          </tr>
+          <tr>
+            <td class="col-highlight">Flecha Atrás (←)</td>
+            <td>Superior izquierda[cite: 1, 3]</td>
+            <td>Botón de retorno[cite: 1, 3]</td>
+            <td>Retrocede un paso en el proceso sin salirte de la aplicación[cite: 1, 3].</td>
+          </tr>
+          <tr>
+            <td class="col-highlight">Huella Dactilar (👆)</td>
+            <td>Dentro de Configuración[cite: 1, 3]</td>
+            <td>Casilla de activación[cite: 1, 3]</td>
+            <td>Permite iniciar sesión tocando el sensor del teléfono sin escribir la clave[cite: 1, 3].</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Paginación Inferior -->
+  <footer class="pagination-footer">
+    <a href="02-bandeja-principal.html" class="nav-prev" style="text-decoration: none;">
+      <span class="nav-sub">ANTERIOR</span>
+      <span class="nav-link">← 0.2 Bandeja principal</span>
+    </a>
+    <a href="11-crear-nota-pedido.html" class="nav-next" style="text-decoration: none;">
+      <span class="nav-sub">SIGUIENTE</span>
+      <span class="nav-link">1.1 Como crear una Nota de Pedido →</span>
+    </a>
+  </footer>
+
+</main>

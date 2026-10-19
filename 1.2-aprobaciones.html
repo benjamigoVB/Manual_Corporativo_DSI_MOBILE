@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>1.2 Aprobación de Ventas y Autorización de Despacho - DSINET Mobile Docs</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global (1220px Fijo Centrado) -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSINET</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas (.layout-container) -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo (300px Fijo) -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li class="active">
+              <a href="1.2-aprobaciones.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-registrar-cliente.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal (.main-content, máx. 920px) -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>Docs</span>
+        <span class="sep">&gt;</span>
+        <span>Gestión de Notas de Pedido</span>
+        <span class="sep">&gt;</span>
+        <span class="current">1.2 Aprobación de Ventas y Autorización de Despacho</span>
+      </nav>
+
+      <!-- Encabezado de la Pantalla -->
+      <header class="content-header">
+        <div class="badge-row" style="margin-bottom: 8px;">
+          <span class="tag" style="background:#E0F2FE; color:#0369A1; font-weight:700;">CIRCUITO DE APROBACIONES</span>
+          <span class="tag" style="background:#F1F5F9; color:#475569;">DOC-ID: DSI-MOB-13</span>
+        </div>
+        <h1 class="page-title">1.2 Aprobación de Ventas y Autorización de Despacho</h1>
+        <p class="lead-text">
+          Guía paso a paso para autorizar un pedido guardado previamente en estado Abierta[cite: 2, 14]. Al aprobar ventas confirmas precios y reservas stock; al autorizar despacho das luz verde al almacén para preparar la mercadería[cite: 2, 14]. En ventas al contado la cobranza queda aprobada de forma automática en el mismo paso[cite: 2, 14].
+        </p>
+
+        <div class="meta-tags">
+          <span class="tag">⏱️ Tiempo estimado: 3 min de lectura</span>
+          <span class="tag">👤 Módulo: Gestión de Pedidos</span>
+          <span class="tag">🔄 Circuito: Ventas → Despacho → Cobranza</span>
+        </div>
+      </header>
+
+      <!-- Callout: Advertencia Crítica de Edición -->
+      <div class="callout-box" style="border-left: 4px solid #D97706; background-color: #FFFBEB; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
+        <strong style="color: #92400E; display: block; font-size: 14px; margin-bottom: 4px;">⚠️ ATENCIÓN CON LOS CAMBIOS EN EL PEDIDO</strong>
+        <p style="margin: 0; font-size: 13px; color: #78350F; line-height: 1.5;">
+          Mientras el pedido esté en estado <strong>Abierta</strong> puedes editar productos libremente[cite: 13]. En cuanto toques <em>Aprobar Ventas</em> o <em>Aprob. Despacho</em>, los precios y cantidades se bloquean de inmediato para que el almacén prepare la mercadería[cite: 13].
+        </p>
+      </div>
+
+      <!-- ==========================================
+           PASO 1 (Captura individual centrada)
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 1: Ubicar el Pedido Abierto y Solicitar Aprobación de Ventas</h2>
+        </div>
+        <p class="section-text">
+          En tu bandeja principal de pedidos pendientes, localiza la Nota de Pedido en estado amarillo <strong>ABIERTA</strong>[cite: 13]. Comprueba el cliente y el monto total, y presiona el botón azul <strong>✓ Aprobar Ventas</strong>[cite: 13].
+        </p>
+
+        <!-- Captura 1 individual centrada -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/APROBACIONES/image 26.png" 
+                 alt="Paso 1: Diálogo ¿Aprobar Ventas? con opción de confirmar" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Ventana emergente para confirmar la aprobación de ventas</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 2 (Captura individual centrada)
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 2: Registrar la Nota del Pedido y Confirmar Venta</h2>
+        </div>
+        <p class="section-text">
+          Se abrirá la ventana emergente <em>¿Aprobar Ventas?</em>[cite: 13]. En el campo de texto ingresa la nota u observación obligatoria para el área comercial (por ejemplo: <code>"Para facturar"</code>) y luego pulsa en el botón <strong>Sí, Aprobar</strong>[cite: 2, 14].
+        </p>
+
+        <!-- Captura individual centrada con su marco de smartphone -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/APROBACIONES/image 27.png" 
+                 alt="Paso 2B: Diálogo emergente de confirmación de aprobación" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Confirmación de venta aprobada exitosamente</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 3 (Captura individual centrada)
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 3: Verificación del Estado 'Aprobación de Ventas'</h2>
+        </div>
+        <p class="section-text">
+          La tarjeta se actualizará automáticamente a la etiqueta <strong>APROBACIÓN DE VENTAS</strong>[cite: 13]. Se habilitará la opción de <strong>Abrir</strong> (para revertir la venta si fuera necesario) y el botón <strong>Aprob. Despacho</strong> con el icono de camión para derivar al almacén[cite: 2, 13, 14].
+        </p>
+
+        <!-- Captura individual centrada -->
+        <div class="mobile-showcase">
+          <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/APROBACIONES/image 28.png" 
+                 alt="Paso 3: Tarjeta con estado Aprobación de Ventas y botón de despacho" 
+                 class="mobile-sharp-img">
+          </div>
+          <span class="mobile-caption">Bandeja con estado Aprobación de Ventas y botón Aprob. Despacho</span>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 4 (Grilla de 2 columnas)
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 4: Ingreso de Comentario y Confirmación de Despacho</h2>
+        </div>
+        <p class="section-text">
+          Al tocar <em>Aprob. Despacho</em> ingresarás a la pantalla de autorización logística[cite: 13]. Verifica la condición de cobro (Contado), redacta un comentario opcional para el despachador si es necesario y toca <strong>Confirmar Autorización de Despacho</strong>[cite: 2, 13, 14]. En la ventana emergente de confirmación pulsa <strong>Sí, Aprobar</strong>[cite: 13, 18].
+        </p>
+
+        <!-- Grilla de 2 capturas en paralelo -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 29.png" 
+                   alt="Paso 4A: Pantalla de comentario de despacho y botón confirmar" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Formulario de visto bueno logístico de salida</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 30.png" 
+                   alt="Paso 4B: Diálogo emergente ¿Aprobar Despacho?" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Confirmación modal para derivar al almacén</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           PASO 5 (Grilla de 2 columnas)
+      =========================================== -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 5: Revisión de Cobranza Automática e Histórico de Estados</h2>
+        </div>
+        <p class="section-text">
+          De regreso en la bandeja, la tarjeta cambiará al estado <strong>APROBACIÓN DE DESPACHO</strong> y mostrará en color verde las 3 áreas: <strong>VENTAS</strong>, <strong>DESPACHO</strong> y <strong>COBRANZA</strong>[cite: 2, 13, 14]. Al abrir la pantalla de <em>Histórico de Estados</em> podrás comprobar que tienen check confirmado con fecha, hora y usuario[cite: 2, 13, 14].
+        </p>
+
+        <!-- Grilla de 2 capturas en paralelo -->
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          
+          <!-- Captura 5A: Tarjeta con los 3 checks verdes en la bandeja -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 31.png" 
+                   alt="Paso 5A: Tarjeta en bandeja con estados Ventas, Despacho y Cobranza en verde" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Bandeja con semáforo completo en verde (Ventas, Despacho, Cobranza)</span>
+          </div>
+
+          <!-- Captura 5B: Histórico de Estados detallado -->
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 32.png" 
+                   alt="Paso 5B: Histórico de Estados con los 3 checks confirmados" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Línea de tiempo con vistos buenos de Ventas, Despacho y Cobranza</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================
+           ABRIR UNA NOTA DE PEDIDO (Grilla de 2 columnas)
+      =========================================== -->
+      <section class="section-block">
+        <h2 class="section-title">Abrir una Nota de Pedido</h2>
+        <p class="section-text">
+          Al presionar el botón de Abrir después de la aprobación por ventas nos mostrará una ventana donde nos pide la confirmación de abrir esa Nota de Pedido[cite: 13]. Usaremos la NP 128[cite: 13].
+        </p>
+
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 33.png" 
+                   alt="Bandeja con NP 128 y botón Abrir" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Ubicación del botón Abrir en tarjeta con estado Aprobación de Ventas</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 34.png" 
+                   alt="Ventana modal ¿Abrir Nota de Pedido?" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Diálogo de advertencia para anular la aprobación y volver a pendiente</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           NOTA DE PEDIDO ABIERTA (Grilla de 2 columnas)
+      =========================================== -->
+      <section class="section-block">
+        <h2 class="section-title">Nota de Pedido Abierta</h2>
+        <p class="section-text">
+          Al abrir la Nota de pedido tendremos la opción de poder editarla y hacer los cambios que creamos convenientes[cite: 13]. Automáticamente podremos ver la pantalla donde se seleccionarán los artículos y al regresar a la pantalla de Inicio veremos que su estado cambio a Abierto[cite: 13].
+        </p>
+
+        <div class="cards-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 16px 0 24px;">
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 35.png" 
+                   alt="Pantalla de selección de artículos para edición" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Carrito activo permitiendo modificar cantidades de la NP</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/APROBACIONES/image 36.png" 
+                   alt="Bandeja principal con tarjeta en estado Abierto" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Tarjeta con etiqueta amarilla y botones de edición habilitados</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+           TABLA TÉCNICA: MATRIZ DE ESTADOS Y ACCIONES
+      =========================================== -->
+      <section class="section-block" style="margin-top: 32px;">
+        <h2 class="section-title">Matriz de Estados y Acciones del Circuito</h2>
+        <p class="section-text">
+          Control de transiciones y comportamiento en el ERP según el botón accionado en la aplicación móvil[cite: 2, 13]:
+        </p>
+
+        <div class="table-container" style="overflow-x: auto; margin-top: 14px;">
+          <table class="tech-table" style="width: 100%; border-collapse: collapse; font-size: 13px;">
+            <thead>
+              <tr style="background-color: #F1F5F9; border-bottom: 2px solid #E2E8F0; text-align: left;">
+                <th style="padding: 10px 12px; color: #0F172A;">CONTROL / BOTÓN</th>
+                <th style="padding: 10px 12px; color: #0F172A;">ESTADO INICIAL</th>
+                <th style="padding: 10px 12px; color: #0F172A;">ACCIÓN QUE EJECUTA</th>
+                <th style="padding: 10px 12px; color: #0F172A;">RESULTADO EN EL SISTEMA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">✓ Aprobar Ventas</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#FEF3C7; color:#92400E; font-size:11px;">Abierta</span></td>
+                <td style="padding: 10px 12px;">Solicita la nota del pedido y confirmación[cite: 13].</td>
+                <td style="padding: 10px 12px;">Cambia a <strong>Aprobación de Ventas</strong> y congela precios[cite: 2, 13].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Abrir</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#E0F2FE; color:#0369A1; font-size:11px;">Aprobación de Ventas</span></td>
+                <td style="padding: 10px 12px;">Desaprueba la venta del pedido[cite: 13].</td>
+                <td style="padding: 10px 12px;">Regresa a <strong>Abierta</strong> y vuelve a permitir la edición[cite: 13].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Aprob. Despacho</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#E0F2FE; color:#0369A1; font-size:11px;">Aprobación de Ventas</span></td>
+                <td style="padding: 10px 12px;">Abre formulario con comentario opcional de entrega[cite: 13].</td>
+                <td style="padding: 10px 12px;">Da visto bueno al almacén para iniciar preparación[cite: 2, 13].</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Confirmar Despacho</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Pantalla Despacho</span></td>
+                <td style="padding: 10px 12px;">Autoriza la salida física y valida venta al contado[cite: 13].</td>
+                <td style="padding: 10px 12px;">Pasa a <strong>Aprobación de Despacho</strong> con checks verdes[cite: 13].</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px 12px; font-weight: 600; color: #0284C7;">Histórico de Estados</td>
+                <td style="padding: 10px 12px;"><span class="tag" style="background:#F1F5F9; color:#475569; font-size:11px;">Cualquier estado</span></td>
+                <td style="padding: 10px 12px;">Despliega la línea de tiempo completa del pedido[cite: 13].</td>
+                <td style="padding: 10px 12px;">Audita usuario, fecha y hora de cada visto bueno[cite: 13].</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior Conectada tal cual el PDF -->
+      <footer class="pagination-footer" style="margin-top: 36px; display: flex; justify-content: space-between; border-top: 1px solid #E2E8F0; padding-top: 20px;">
+        <a href="1.1-crear-nota-pedido.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub" style="font-size: 10px; font-weight: 700; color: #64748B; text-transform: uppercase;">ANTERIOR</span>
+          <span class="nav-link" style="display: block; font-weight: 600; color: #0284C7;">← 1.2 Flujo de Nueva Nota de Pedido</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Registro paso a paso de la orden</span>
+        </a>
+        <a href="1.3-registrar-cliente.html" class="nav-next" style="text-decoration: none; text-align: right;">
+          <span class="nav-sub" style="font-size: 10px; font-weight: 700; color: #64748B; text-transform: uppercase;">SIGUIENTE</span>
+          <span class="nav-link" style="display: block; font-weight: 600; color: #0284C7;">2.1 Consulta General de Clientes →</span>
+          <span style="font-size:11px; color:#64748B; display:block;">Directorio general y estados de cuenta</span>
+        </a>
+      </footer>
+
+      <!-- Pie de utilidad -->
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:24px; padding-top:16px; border-top:1px solid #E2E8F0; font-size:12px; color:#64748B;">
+        <div>¿Te resultó útil esta documentación? <button style="background:none; border:none; cursor:pointer;">👍 Sí</button> <button style="background:none; border:none; cursor:pointer;">👎 No</button></div>
+        <div>Última actualización técnica: Octubre 2026 • DSI SAC Helpdesk</div>
+      </div>
+
+    </main>
