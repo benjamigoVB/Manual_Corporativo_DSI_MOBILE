@@ -11,12 +11,12 @@
 </head>
 <body>
 
-  <!-- 1. Header Superior Global (Sin barra de búsqueda y con botón de Modo Oscuro) -->
+  <!-- 1. Header Superior Global -->
   <header class="topbar">
     <div class="topbar-inner">
       
       <div class="topbar-left">
-        <!-- Botón menú hamburguesa para dispositivos móviles -->
+        <!-- Botón menú hamburguesa para móviles -->
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">☰</button>
 
         <div class="logo-box">
@@ -29,11 +29,12 @@
       </div>
 
       <div class="topbar-right">
-        <!-- BOTÓN MODO OSCURO / CLARO -->
+        <!-- BOTÓN MODO OSCURO (SIEMPRE VISIBLE) -->
         <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
           <span class="theme-icon">🌙</span>
         </button>
 
+        <!-- Estos enlaces son los únicos que se ocultarán en móvil -->
         <a href="#glosario" class="topbar-link">Glosario</a>
         <a href="#soporte" class="topbar-link">Soporte Técnico</a>
         <a href="#dsisac" class="topbar-link">DSI SAC</a>

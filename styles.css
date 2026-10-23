@@ -767,8 +767,24 @@ img {
   }
 
   .topbar-right {
-    display: none;
-  }
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ocultar ÚNICAMENTE los enlaces de texto y el selector de país en celular */
+.topbar-right .topbar-link,
+.topbar-right .lang-selector {
+  display: none !important;
+}
+
+/* Asegurar que el botón del tema se muestre limpio y accesible */
+.theme-toggle-btn {
+  display: inline-flex !important;
+  font-size: 16px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
 
   /* 2. Fondo oscuro translúcido que aparece cuando se abre el menú */
   .layout-container {
@@ -824,18 +840,36 @@ img {
   }
 
   /* Botón hamburguesa visible en celulares */
+  @media (max-width: 768px) {
   .mobile-menu-btn {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    background: none;
-    border: none;
-    font-size: 22px;
-    color: #0F172A;
+    background: transparent !important;
+    border: none !important;
+    font-size: 26px !important;       /* Tamaño visible de las 3 rayas */
+    line-height: 1 !important;
+    color: #0F172A !important;        /* Color oscuro visible sobre fondo blanco */
     cursor: pointer;
-    padding: 4px 8px;
-    margin-right: 6px;
+    padding: 6px 10px !important;
+    margin-right: 8px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    z-index: 101;                     /* Asegura que no quede tapado por otra capa */
   }
+
+  /* Si activas el modo oscuro, el icono debe verse en blanco */
+  body.dark-mode .mobile-menu-btn {
+    color: #F8FAFC !important;
+  }
+}
+
+/* Ocultar siempre en computadoras / pantallas grandes */
+@media (min-width: 769px) {
+  .mobile-menu-btn {
+    display: none !important;
+  }
+}
 
   /* 4. Contenido principal a pantalla completa */
   .main-content {
@@ -890,9 +924,9 @@ img {
   }
 }
 
-/* ==========================================
+/* ==========================================================================
    BOTÓN DEL TEMA (MODO OSCURO / CLARO)
-   ========================================== */
+   ========================================================================== */
 .theme-toggle-btn {
   background: transparent;
   border: 1px solid #E2E8F0;
@@ -912,101 +946,169 @@ img {
   border-color: #CBD5E1;
 }
 
-/* ==========================================
-   PALETA DE COLORES: MODO OSCURO
-   ========================================== */
+/* ==========================================================================
+   MODO OSCURO GLOBAL COMPLETO (PC Y MÓVIL)
+   ========================================================================== */
+
+/* 1. Fondo general y textos base */
 body.dark-mode {
-  background-color: #0B0F19;
-  color: #E2E8F0;
+  background-color: #0B0F19 !important;
+  color: #E2E8F0 !important;
 }
 
-/* Cabecera y Barra Lateral */
-body.dark-mode .topbar,
-body.dark-mode .sidebar {
-  background-color: #0F172A;
-  border-color: #1E293B;
+/* 2. Cabecera (Topbar) */
+body.dark-mode .topbar {
+  background-color: #0F172A !important;
+  border-bottom-color: #1E293B !important;
+}
+
+body.dark-mode .logo-title {
+  color: #38BDF8 !important;
+}
+
+body.dark-mode .topbar-link {
+  color: #94A3B8 !important;
+}
+
+body.dark-mode .topbar-link:hover {
+  color: #38BDF8 !important;
 }
 
 body.dark-mode .theme-toggle-btn {
-  border-color: #334155;
-  color: #F8FAFC;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
 }
 
 body.dark-mode .theme-toggle-btn:hover {
-  background-color: #1E293B;
+  background-color: #1E293B !important;
 }
 
-body.dark-mode .topbar-link,
-body.dark-mode .logo-title {
-  color: #F8FAFC;
+body.dark-mode .mobile-menu-btn {
+  color: #F8FAFC !important;
 }
 
-body.dark-mode .sidebar-filter-wrapper input {
-  background-color: #1E293B;
-  border-color: #334155;
-  color: #FFFFFF;
+/* 3. Menú Lateral (Sidebar) tanto en Desktop como en Celulares */
+body.dark-mode .sidebar {
+  background-color: #0F172A !important;
+  border-right-color: #1E293B !important;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.6) !important;
 }
 
-/* Textos y enlaces del Sidebar */
-body.dark-mode .group-toggle,
-body.dark-mode .nav-subitems a {
-  color: #94A3B8;
+body.dark-mode .sidebar-filter-wrapper input,
+body.dark-mode .sidebar__filter input {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+body.dark-mode .sidebar-filter-wrapper input::placeholder,
+body.dark-mode .sidebar__filter input::placeholder {
+  color: #64748B !important;
+}
+
+body.dark-mode .group-toggle {
+  color: #F8FAFC !important;
+}
+
+body.dark-mode .group-toggle .arrow {
+  color: #64748B !important;
+}
+
+body.dark-mode .nav-subitems a,
+body.dark-mode .toc__link {
+  color: #94A3B8 !important;
+}
+
+body.dark-mode .nav-subitems a:hover,
+body.dark-mode .toc__link:hover {
+  color: #F8FAFC !important;
+  background-color: #1E293B !important;
 }
 
 body.dark-mode .nav-subitems li.active a,
-body.dark-mode .nav-subitems a:hover {
-  color: #38BDF8;
+body.dark-mode .toc__link--active {
+  color: #38BDF8 !important;
+  background-color: rgba(56, 189, 248, 0.12) !important;
 }
 
-/* Contenido Principal y Tarjetas */
+/* 4. Área de Contenido Principal */
+body.dark-mode .content,
 body.dark-mode .main-content {
-  background-color: #0B0F19;
+  background-color: #0B0F19 !important;
+}
+
+body.dark-mode .breadcrumbs,
+body.dark-mode .breadcrumbs a {
+  color: #64748B !important;
+}
+
+body.dark-mode .breadcrumbs .current {
+  color: #38BDF8 !important;
 }
 
 body.dark-mode .page-title,
+body.dark-mode .content__title,
 body.dark-mode .section-title,
 body.dark-mode h2,
 body.dark-mode h3 {
-  color: #F8FAFC;
+  color: #F8FAFC !important;
+  border-bottom-color: #1E293B !important;
 }
 
 body.dark-mode .lead-text,
+body.dark-mode .content__lead,
 body.dark-mode .section-subtext,
+body.dark-mode .section-text,
 body.dark-mode p {
-  color: #94A3B8;
+  color: #94A3B8 !important;
 }
 
+/* 5. Tarjetas (Cards Grid) */
 body.dark-mode .feature-card {
-  background-color: #0F172A;
-  border-color: #1E293B;
+  background-color: #0F172A !important;
+  border-color: #1E293B !important;
 }
 
-/* Tablas Técnicas */
-body.dark-mode .tech-table {
-  border-color: #1E293B;
+body.dark-mode .feature-card h3 {
+  color: #F8FAFC !important;
 }
 
-body.dark-mode .tech-table th {
-  background-color: #1E293B;
-  color: #F8FAFC;
+/* 6. Tablas Técnicas */
+body.dark-mode .table-container,
+body.dark-mode .table-wrap,
+body.dark-mode .tech-table,
+body.dark-mode .data-table {
+  border-color: #1E293B !important;
 }
 
-body.dark-mode .tech-table td {
-  border-color: #1E293B;
-  color: #CBD5E1;
+body.dark-mode .tech-table th,
+body.dark-mode .data-table th {
+  background-color: #1E293B !important;
+  color: #F8FAFC !important;
+  border-bottom-color: #334155 !important;
 }
 
-body.dark-mode .tech-table tr:hover {
-  background-color: #131D31;
+body.dark-mode .tech-table td,
+body.dark-mode .data-table td {
+  border-bottom-color: #1E293B !important;
+  color: #CBD5E1 !important;
 }
 
-/* Paginación Inferior */
-body.dark-mode .pagination-footer {
-  border-top-color: #1E293B;
+body.dark-mode .tech-table tr:hover,
+body.dark-mode .data-table tr:hover {
+  background-color: #131D31 !important;
+}
+
+/* 7. Paginación Inferior */
+body.dark-mode .pagination-footer,
+body.dark-mode .page-nav,
+body.dark-mode .pagination-nav {
+  border-top-color: #1E293B !important;
 }
 
 body.dark-mode .nav-prev,
-body.dark-mode .nav-next {
-  background-color: #0F172A;
-  border: 1px solid #1E293B;
+body.dark-mode .nav-next,
+body.dark-mode .pagination-card {
+  background-color: #0F172A !important;
+  border-color: #1E293B !important;
 }
