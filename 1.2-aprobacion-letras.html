@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+  <title>1.2 Aprobación de Despacho con Forma de Cobro: Letras - DSI MOBILE</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header Superior Global -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      
+      <div class="topbar-left">
+        <!-- Botón menú hamburguesa para dispositivos móviles -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú de navegación">☰</button>
+
+        <div class="logo-box">
+          <span class="logo-icon">📘</span>
+          <div class="logo-text-group">
+            <span class="logo-title">DSI MOBILE</span>
+            <span class="logo-subtitle">MANUAL DE USUARIO</span>
+          </div>
+        </div>
+
+        <div class="global-search-bar">
+          <span class="search-icon">🔍</span>
+          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
+          <kbd class="shortcut-key">Ctrl+K</kbd>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <a href="#glosario" class="topbar-link">Glosario</a>
+        <a href="#soporte" class="topbar-link">Soporte Técnico</a>
+        <a href="#dsisac" class="topbar-link">DSI SAC</a>
+        <div class="lang-selector">
+          <span class="lang-active">ES</span>
+          <span class="lang-country">PE</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 2. Contenedor Maestro de 2 Columnas -->
+  <div class="layout-container">
+    
+    <!-- Columna 1: Sidebar Izquierdo -->
+    <aside class="sidebar">
+      <div class="sidebar-filter-wrapper">
+        <input type="text" id="sidebarSearch" placeholder="Filtrar por título..." autocomplete="off">
+      </div>
+
+      <nav class="nav-tree">
+        <!-- Grupo 0 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-0">
+            <span class="arrow">▼</span> 0. INTRODUCCIÓN Y CONFIGURACIÓN
+          </button>
+          <ul id="group-0" class="nav-subitems">
+            <li>
+              <a href="index.html">0.0 ¿Qué es DSINET MOBILE?</a>
+            </li>
+            <li>
+              <a href="0.1-login.html">0.1 Login e inicio de sesion</a>
+            </li>
+            <li>
+              <a href="0.2-bandeja-principal.html">0.2 Bandeja principal</a>
+            </li>
+            <li>
+              <a href="0.3-generalidades.html">0.3 Generalidades y botones basicos</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Grupo 1 -->
+        <div class="nav-group">
+          <button class="group-toggle" data-target="group-1">
+            <span class="arrow">▼</span> 1. GESTIÓN Y CONSULTA DE CARTERA
+          </button>
+          <ul id="group-1" class="nav-subitems">
+            <li>
+              <a href="1.1-crear-nota-pedido.html">1.1 Como crear una Nota de Pedido</a>
+            </li>
+            <li class="active">
+              <a href="1.2-aprobacion-letras.html">1.2 Aprobación de Ventas y Autorización de Despacho</a>
+            </li>
+            <li>
+              <a href="1.3-aprobaciones.html">1.3 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+            <li>
+              <a href="1.4-registrar-cliente.html">1.4 Registrar Cliente Rápido desde la Nota de Pedido</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Columna 2: Contenido Principal -->
+    <main class="main-content">
+      
+      <!-- Migas de pan (Breadcrumbs) -->
+      <nav class="breadcrumbs">
+        <span>Docs</span>
+        <span class="sep">&gt;</span>
+        <span>1. Gestión y Consulta de Cartera</span>
+        <span class="sep">&gt;</span>
+        <span class="current">1.2 Aprobación de Despacho con Forma de Cobro: Letras</span>
+      </nav>
+
+      <!-- Encabezado de la Pantalla -->
+      <header class="content-header">
+        <div class="badge-row" style="margin-bottom: 8px;">
+          <span class="tag" style="background:#E0F2FE; color:#0369A1; font-weight:700;">CIRCUITO DE COBRANZA Y DESPACHO</span>
+        </div>
+        <h1 class="page-title">1.2 Aprobación de Despacho con Forma de Cobro: Letras</h1>
+        <p class="lead-text">
+          Si una Nota de Pedido se emite con la forma de cobro en <strong>LETRA</strong>, la autorización logística varía respecto a las ventas al contado. Antes de autorizar la salida de mercadería en almacén, el vendedor debe programar el canje de letras del cliente completando el formulario de cuotas, banco y vencimientos.
+        </p>
+      </header>
+
+      <!-- Callout: Diferencia Crítica -->
+      <div class="callout-box" style="border-left: 4px solid #D97706; background-color: #FFFBEB; padding: 16px 20px; border-radius: 8px; margin-bottom: 24px;">
+        <strong style="color: #92400E; display: block; font-size: 14px; margin-bottom: 4px;">⚠️ DIFERENCIA CRÍTICA CON VENTAS AL CONTADO</strong>
+        <p style="margin: 0; font-size: 13px; color: #78350F; line-height: 1.5;">
+          A diferencia de una venta al contado, las órdenes pactadas con Letras no aprueban la cobranza en automático. Es obligatorio registrar el banco, cantidad de cuotas y fechas para que finanzas y logística liberen el pedido.
+        </p>
+      </div>
+
+      <!-- PASO 1 -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 1: Localizar la NP en la Bandeja y Tocar 'Aprob. Despacho'</h2>
+        </div>
+        <p class="section-text">
+          En la bandeja principal de pedidos, ubica la Nota de Pedido que ya cuenta con ventas aprobadas (etiqueta <strong>APROBACIÓN DE VENTAS</strong>). Verifica que la condición indique cobro por <strong>LETRA</strong> y presiona el botón <strong>Aprob. Despacho</strong>.
+        </p>
+
+        <!-- Marco móvil idéntico al de la Imagen 1 -->
+        <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 151.png" 
+                alt="" 
+                class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Bandeja principal con tarjeta en Aprobación de Ventas, condición LETRA y botón Aprob. Despacho</span>
+        </div>
+
+      <!-- PASO 2 -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 2: Completar el Formulario 'Datos de Letras'</h2>
+        </div>
+        <p class="section-text">
+          Al ingresar a la pantalla de Aprobación de Despacho con la pestaña <em>Datos de letras</em> activa, completa los campos requeridos para estructurar el canje:
+        </p>
+        <ul class="feature-bullets" style="margin-bottom: 16px;">
+          <li><strong>Banco:</strong> Selecciona la entidad financiera para el cobro o descuento.</li>
+          <li><strong>Cantidad de Letras:</strong> Digita el total de cuotas en las que se dividirá el saldo.</li>
+          <li><strong>Primer Vencimiento:</strong> Selecciona o digita la fecha de la primera letra (<code>--/--/----</code>).</li>
+          <li><strong>Días entre Vencimientos:</strong> Establece el intervalo en días entre cuotas (por defecto 30).</li>
+          <li><strong>Comentario (opcional):</strong> Ingresa indicaciones logísticas, número de canje o condiciones particulares de crédito.</li>
+        </ul>
+
+        <!-- 1 Imagen Centrada tal cual el PDF -->
+        <div class="mobile-showcase">
+        <div class="mobile-mockup-frame">
+            <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 152.png" 
+                alt="Formulario de Aprobación de Despacho por Letras" 
+                class="mobile-sharp-img">
+        </div>
+        <span class="mobile-caption">Formulario de registro de datos de letras y cronograma de vencimientos</span>
+        </div>
+
+      <!-- PASO 3 -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 3: Generar Cronograma y Confirmar Aprobación</h2>
+        </div>
+        <p class="section-text">
+          Presiona el botón <strong>📅 Generar Cronograma</strong> para calcular las fechas y montos proyectados. Podrás revisar el desglose de cuotas generado, consultar la pestaña <em>Estado de cuenta</em> si necesitas revisar documentos previos con saldo por pagar, y luego tocar <strong>Confirmar Aprobación de Despacho</strong> para validar la ventana emergente <em>¿Aprobar Despacho?</em>.
+        </p>
+
+       <!-- Grilla de 2 columnas para el cálculo del cronograma según el PDF -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 24px;">
+          
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 153.png" 
+                   alt="Botón Generar Cronograma accionado" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Botón Generar Cronograma accionado</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 154.png" 
+                   alt="Detalle de letra generada con vencimiento y monto" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Detalle de letra generada con vencimiento y monto</span>
+          </div>
+
+        </div>
+
+        <!-- Grilla de 2 columnas para Estado de Cuenta y Modal de Confirmación según el PDF -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+          
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 155.png" 
+                   alt="Pestaña Estado de cuenta con documentos pendientes" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Pestaña Estado de cuenta con documentos pendientes</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 156.png" 
+                   alt="Ventana emergente ¿Aprobar Despacho? - Confirmar" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Ventana emergente ¿Aprobar Despacho? - Confirmar</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PASO 4 -->
+      <section class="section-block">
+        <div class="step-header" style="border-bottom: 2px solid #BAE6FD; padding-bottom: 6px; margin-bottom: 12px;">
+          <h2 class="section-title" style="margin:0;">Paso 4: Verificación Final en Bandeja e Histórico</h2>
+        </div>
+        <p class="section-text">
+          Al regresar a la bandeja de pedidos, la tarjeta reflejará la etiqueta verde <strong>APROBACIÓN DE DESPACHO</strong>. Al abrir el <em>Histórico de Estados</em>, podrás verificar la trazabilidad completa con los vistos buenos confirmados de ventas, despacho y la gestión de cobranza programada.
+        </p>
+
+        <!-- Grilla de 2 columnas para Bandeja final e Histórico según el PDF -->
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr); gap: 20px;">
+          
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 157.png" 
+                   alt="Tarjeta final en estado APROBACIÓN DE DESPACHO" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Tarjeta en estado APROBACIÓN DE DESPACHO con condición LETRA</span>
+          </div>
+
+          <div class="mobile-showcase" style="margin: 0 auto;">
+            <div class="mobile-mockup-frame">
+              <img src="IMAGENES/FUNCIONES/DESPACHO_LETRAS/image 158.png" 
+                   alt="Línea de tiempo de estados en Histórico" 
+                   class="mobile-sharp-img">
+            </div>
+            <span class="mobile-caption">Línea de tiempo de estados y auditoría en Histórico</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TABLA TÉCNICA: CAMPOS Y PARÁMETROS -->
+      <section class="section-block" style="margin-top: 32px;">
+        <h2 class="section-title">Campos y Parámetros del Formulario de Letras</h2>
+        <div class="table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">CAMPO / CONTROL</th>
+                <th style="width: 18%;">TIPO DE DATO</th>
+                <th style="width: 15%;">¿OBLIGATORIO?</th>
+                <th style="width: 45%;">REGLA DE NEGOCIO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-highlight">Banco</td>
+                <td>Desplegable</td>
+                <td>Sí</td>
+                <td>Entidad financiera asignada para la custodia o cobro de las letras físicas.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Cantidad de Letras</td>
+                <td>Numérico entero</td>
+                <td>Sí</td>
+                <td>Número de cuotas en que se fracciona el importe del pedido.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Primer Vencimiento</td>
+                <td>Fecha (DD/MM/AAAA)</td>
+                <td>Sí</td>
+                <td>Fecha pactada para la cancelación de la primera cuota.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Días entre Vencimientos</td>
+                <td>Numérico entero</td>
+                <td>Sí</td>
+                <td>Intervalo de días calendario entre letras consecutivas (por defecto 30).</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Comentario</td>
+                <td>Texto libre</td>
+                <td>No</td>
+                <td>Observaciones logísticas o condiciones particulares del crédito.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Generar Cronograma</td>
+                <td>Botón interactivo</td>
+                <td>Recomendado</td>
+                <td>Calcula y visualiza la tabla preliminar de fechas e importes.</td>
+              </tr>
+              <tr>
+                <td class="col-highlight">Confirmar Aprobación de Despacho</td>
+                <td>Botón de acción</td>
+                <td>Sí</td>
+                <td>Registra el canje, actualiza el estado del pedido y autoriza al almacén.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Paginación Inferior -->
+      <footer class="pagination-footer">
+        <a href="1.1-crear-nota-pedido.html" class="nav-prev" style="text-decoration: none;">
+          <span class="nav-sub">ANTERIOR</span>
+          <span class="nav-link">← 1.1 Cómo crear una Nota de Pedido</span>
+        </a>
+        <a href="1.3-aprobaciones.html" class="nav-next" style="text-decoration: none;">
+          <span class="nav-sub">SIGUIENTE</span>
+          <span class="nav-link">1.3 Registrar Cliente Rápido →</span>
+        </a>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
