@@ -223,14 +223,17 @@
 
       <!-- Paginación Inferior -->
       <footer class="pagination-footer">
-        <div class="nav-prev">
+        <!-- Botón Anterior: Deshabilitado / Sin enlace interactivo -->
+        <div class="nav-prev disabled" style="opacity: 0.5; pointer-events: none; cursor: default;">
           <span class="nav-sub">ANTERIOR</span>
-          <span class="nav-link">Inicio del Portal</span>
+          <span class="nav-link">— Inicio del Manual</span>
         </div>
-        <div class="nav-next">
+
+        <!-- Botón Siguiente: Con enlace activo a la ruta que deseas -->
+        <a href="0.1-login.html" class="nav-next" style="text-decoration: none;">
           <span class="nav-sub">SIGUIENTE</span>
-          <span class="nav-link">0.1 Login e inicio de sesion →</span>
-        </div>
+          <span class="nav-link">0.1 Login e inicio de sesión →</span>
+        </a>
       </footer>
 
     </main>
