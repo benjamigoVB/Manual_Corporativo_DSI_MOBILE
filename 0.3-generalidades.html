@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- 1. Header Superior Global -->
+  <!-- 1. Header Superior Global (Sin barra de búsqueda y con botón de Modo Oscuro) -->
   <header class="topbar">
     <div class="topbar-inner">
       
@@ -26,15 +26,14 @@
             <span class="logo-subtitle">MANUAL DE USUARIO</span>
           </div>
         </div>
-
-        <div class="global-search-bar">
-          <span class="search-icon">🔍</span>
-          <input type="text" placeholder="Buscar en la documentación de DSI-NET..." id="globalSearch">
-          <kbd class="shortcut-key">Ctrl+K</kbd>
-        </div>
       </div>
 
       <div class="topbar-right">
+        <!-- BOTÓN MODO OSCURO / CLARO -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Cambiar tema visual" title="Modo Oscuro / Claro">
+          <span class="theme-icon">🌙</span>
+        </button>
+
         <a href="#glosario" class="topbar-link">Glosario</a>
         <a href="#soporte" class="topbar-link">Soporte Técnico</a>
         <a href="#dsisac" class="topbar-link">DSI SAC</a>

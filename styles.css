@@ -889,3 +889,124 @@ img {
     display: none;
   }
 }
+
+/* ==========================================
+   BOTÓN DEL TEMA (MODO OSCURO / CLARO)
+   ========================================== */
+.theme-toggle-btn {
+  background: transparent;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  color: #0F172A;
+}
+
+.theme-toggle-btn:hover {
+  background-color: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+/* ==========================================
+   PALETA DE COLORES: MODO OSCURO
+   ========================================== */
+body.dark-mode {
+  background-color: #0B0F19;
+  color: #E2E8F0;
+}
+
+/* Cabecera y Barra Lateral */
+body.dark-mode .topbar,
+body.dark-mode .sidebar {
+  background-color: #0F172A;
+  border-color: #1E293B;
+}
+
+body.dark-mode .theme-toggle-btn {
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  background-color: #1E293B;
+}
+
+body.dark-mode .topbar-link,
+body.dark-mode .logo-title {
+  color: #F8FAFC;
+}
+
+body.dark-mode .sidebar-filter-wrapper input {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #FFFFFF;
+}
+
+/* Textos y enlaces del Sidebar */
+body.dark-mode .group-toggle,
+body.dark-mode .nav-subitems a {
+  color: #94A3B8;
+}
+
+body.dark-mode .nav-subitems li.active a,
+body.dark-mode .nav-subitems a:hover {
+  color: #38BDF8;
+}
+
+/* Contenido Principal y Tarjetas */
+body.dark-mode .main-content {
+  background-color: #0B0F19;
+}
+
+body.dark-mode .page-title,
+body.dark-mode .section-title,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #F8FAFC;
+}
+
+body.dark-mode .lead-text,
+body.dark-mode .section-subtext,
+body.dark-mode p {
+  color: #94A3B8;
+}
+
+body.dark-mode .feature-card {
+  background-color: #0F172A;
+  border-color: #1E293B;
+}
+
+/* Tablas Técnicas */
+body.dark-mode .tech-table {
+  border-color: #1E293B;
+}
+
+body.dark-mode .tech-table th {
+  background-color: #1E293B;
+  color: #F8FAFC;
+}
+
+body.dark-mode .tech-table td {
+  border-color: #1E293B;
+  color: #CBD5E1;
+}
+
+body.dark-mode .tech-table tr:hover {
+  background-color: #131D31;
+}
+
+/* Paginación Inferior */
+body.dark-mode .pagination-footer {
+  border-top-color: #1E293B;
+}
+
+body.dark-mode .nav-prev,
+body.dark-mode .nav-next {
+  background-color: #0F172A;
+  border: 1px solid #1E293B;
+}

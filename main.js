@@ -74,3 +74,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Activar / Desactivar Modo Oscuro
+const themeToggleBtn = document.getElementById('themeToggleBtn');
+
+if (themeToggleBtn) {
+  const themeIcon = themeToggleBtn.querySelector('.theme-icon');
+
+  // Comprobar preferencia guardada
+  if (localStorage.getItem('dsi_theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    if (themeIcon) themeIcon.textContent = '☀️';
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    
+    if (themeIcon) {
+      themeIcon.textContent = isDark ? '☀️' : '🌙';
+    }
+    
+    localStorage.setItem('dsi_theme', isDark ? 'dark' : 'light');
+  });
+}
